@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Jobs Africa — Freelancer Roster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --um-blue:#00274C;
+    --um-blue-deep:#001A33;
+    --maize:#FFCB05;
+    --paper:#FBFAF7;
+    --ink:#1F2A37;
+    --ink-soft:#54616F;
+    --rule:#DCE1E7;
+    --card:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:#E9EAEC;}
+  body{
+    font-family:'Public Sans',system-ui,sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .flyer{
+    width:820px;
+    margin:24px auto;
+    background:var(--paper);
+    box-shadow:0 6px 32px rgba(0,20,40,.18);
+  }
+
+  /* ── Header ───────────────────────────── */
+  header{
+    background:linear-gradient(160deg,var(--um-blue) 0%,var(--um-blue-deep) 100%);
+    color:#fff;
+    padding:44px 52px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{   /* maize baseline rule */
+    content:"";
+    position:absolute;left:0;right:0;bottom:0;
+    height:5px;background:var(--maize);
+  }
+  .eyebrow{
+    font-size:11px;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--maize);
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Source Serif 4',Georgia,serif;
+    font-weight:700;font-size:52px;line-height:1.02;
+    letter-spacing:-.01em;
+    max-width:480px;
+  }
+  .lede{
+    margin-top:18px;max-width:470px;
+    font-size:14.5px;line-height:1.65;color:#C9D4E0;
+  }
+  .lede strong{color:#fff;font-weight:600;}
+  .logo{
+    position:absolute;top:34px;right:48px;
+    width:160px;height:160px;
+  }
+  .logo .ringtext{
+    font-family:'Public Sans',sans-serif;
+    font-size:9.5px;font-weight:700;letter-spacing:.30em;
+    fill:#8FA6BD;
+  }
+  /* ── Roster ───────────────────────────── */
+  .roster{padding:34px 52px 16px;}
+  .section{margin-bottom:30px;}
+  .section-head{
+    display:flex;align-items:baseline;gap:14px;
+    margin-bottom:16px;
+  }
+  .section-head h2{
+    font-family:'Source Serif 4',Georgia,serif;
+    font-size:19px;font-weight:600;color:var(--um-blue);
+    white-space:nowrap;
+  }
+  .section-head .count{
+    font-size:11px;font-weight:700;letter-spacing:.1em;
+    color:var(--ink-soft);
+  }
+  .section-head::after{
+    content:"";flex:1;height:1px;background:var(--rule);
+    align-self:center;
+  }
+  .grid{
+    display:grid;grid-template-columns:repeat(5,1fr);
+    gap:14px;
+  }
+  .person{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:3px solid var(--maize);
+    border-radius:6px;
+    padding:14px 10px 12px;
+    text-align:center;
+  }
+  .avatar{
+    width:64px;height:64px;border-radius:50%;
+    margin:0 auto 10px;
+    background:var(--um-blue);
+    color:var(--maize);
+    font-family:'Source Serif 4',Georgia,serif;
+    font-size:24px;font-weight:600;
+    display:flex;align-items:center;justify-content:center;
+    border:2px solid var(--um-blue);
+    overflow:hidden;
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;}
+  .person .name{
+    font-size:13px;font-weight:700;color:var(--ink);
+    line-height:1.25;margin-bottom:3px;
+  }
+  .person .name a{color:inherit;text-decoration:none;}
+  .person .name a:hover{color:#1656A0;text-decoration:underline;}
+  .person .role{
+    font-size:11px;line-height:1.4;color:var(--ink-soft);
+  }
+
+  /* ── Footer ───────────────────────────── */
+  footer{
+    background:var(--um-blue);
+    border-top:5px solid var(--maize);
+    color:#fff;
+    padding:22px 52px;
+    display:flex;justify-content:space-between;align-items:center;
+    gap:24px;
+  }
+  footer .q{font-size:13px;color:#C9D4E0;flex:1;}
+  footer a{
+    color:var(--maize);font-weight:700;font-size:14px;
+    text-decoration:none;letter-spacing:.01em;
+  }
+
+  /* ── Print ────────────────────────────── */
+  @media print{
+    html{background:#fff;}
+    .flyer{margin:0;box-shadow:none;width:100%;}
+    .person,.how,header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+  @media (max-width:860px){
+    .flyer{width:100%;margin:0;}
+    header,.roster,footer{padding-left:24px;padding-right:24px;}
+    .logo{display:none;}
+    .how{grid-template-columns:1fr;}
+    .how div{border-right:none;border-bottom:1px solid var(--rule);}
+    .grid{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+<div class="flyer">
+
+  <header>
+    <p class="eyebrow">A University of Michigan Research Program</p>
+    <h1>Global Jobs Africa</h1>
+    <p class="lede">Supporting new African freelancers as they launch careers on Upwork. <strong>A portion of each freelancer&rsquo;s wages is covered by the program</strong>, allowing them to bid lower on their first contracts &mdash; at no added cost or risk to clients.</p>
+    <svg class="logo" viewBox="0 0 140 140" aria-label="Global Jobs Africa logo">
+      <circle cx="70" cy="70" r="66" fill="none" stroke="#33506E" stroke-width="1"/>
+      <defs><path id="hring" d="M70,70 m -57,0 a57,57 0 1,1 114,0 a57,57 0 1,1 -114,0"/></defs>
+      <text font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.4" fill="#8FA6BD"><textPath href="#hring" startOffset="1%">GLOBAL JOBS AFRICA &#183; UNIVERSITY OF MICHIGAN &#183;</textPath></text>
+      <path fill-rule="evenodd" fill="#FFCB05" d="M26,70 a44,44 0 1,0 88,0 a44,44 0 1,0 -88,0 Z M48.5,42.8 Q50.0,42.0 53.5,39.0 Q57.0,36.0 61.5,34.8 Q66.0,33.5 70.0,34.5 Q74.0,35.5 77.5,35.2 Q81.0,35.0 82.8,36.2 Q84.5,37.5 85.5,40.2 Q86.5,43.0 87.8,46.2 Q89.0,49.5 91.5,50.5 Q94.0,51.5 97.0,52.5 Q100.0,53.5 100.0,53.5 Q100.0,53.5 96.2,56.5 Q92.5,59.5 89.5,62.0 Q86.5,64.5 85.2,67.2 Q84.0,70.0 83.5,73.0 Q83.0,76.0 83.2,79.0 Q83.5,82.0 81.8,85.5 Q80.0,89.0 78.0,92.0 Q76.0,95.0 73.8,97.8 Q71.5,100.5 68.8,102.0 Q66.0,103.5 63.8,102.5 Q61.5,101.5 60.8,98.5 Q60.0,95.5 60.2,92.2 Q60.5,89.0 61.0,85.5 Q61.5,82.0 62.0,78.8 Q62.5,75.5 63.0,72.8 Q63.5,70.0 62.8,68.8 Q62.0,67.5 58.2,66.5 Q54.5,65.5 51.0,63.8 Q47.5,62.0 45.2,59.2 Q43.0,56.5 42.2,53.8 Q41.5,51.0 42.8,48.8 Q44.0,46.5 45.5,45.0 Q47.0,43.5 48.5,42.8 Z M88.0,80.5 Q91.5,77.5 92.5,82.0 Q93.5,88.0 89.5,94.0 Q86.5,89.5 88.0,80.5 Z"/>
+      <path d="M45.5,54 Q59.4,38.0 75.3,37.6" fill="none" stroke="#FFFFFF" stroke-width="0.55" stroke-linecap="round"/>
+      <polygon points="78.3,37.5 75.4,39.3 75.3,35.9" fill="#FFFFFF"/>
+      <path d="M56,56 Q65.6,48.0 73.0,45.4" fill="none" stroke="#FFFFFF" stroke-width="0.55" stroke-linecap="round"/>
+      <polygon points="75.8,44.5 73.5,47.0 72.4,43.8" fill="#FFFFFF"/>
+      <path d="M60,63.5 Q67.4,55.7 74.1,51.6" fill="none" stroke="#FFFFFF" stroke-width="0.55" stroke-linecap="round"/>
+      <polygon points="76.6,50.1 75.0,53.1 73.2,50.2" fill="#FFFFFF"/>
+      <path d="M81.5,70.5 Q83.7,65.1 84.0,60.5" fill="none" stroke="#FFFFFF" stroke-width="0.55" stroke-linecap="round"/>
+      <polygon points="84.2,57.5 85.7,60.6 82.3,60.4" fill="#FFFFFF"/>
+      <path d="M68,74 Q72.5,66.0 78.0,58.5" fill="none" stroke="#FFFFFF" stroke-width="0.55" stroke-linecap="round"/>
+      <polygon points="79.8,56.1 79.4,59.5 76.6,57.5" fill="#FFFFFF"/>
+      <path d="M70,95 Q70.0,76.4 83.0,60.2" fill="none" stroke="#FFFFFF" stroke-width="0.55" stroke-linecap="round"/>
+      <polygon points="84.8,57.8 84.3,61.2 81.6,59.1" fill="#FFFFFF"/>
+      <polygon points="45.5,52.1 46.1,53.4 47.4,54.0 46.1,54.6 45.5,55.9 44.9,54.6 43.6,54.0 44.9,53.4" fill="#FFFFFF"/>
+      <polygon points="56.0,54.1 56.6,55.4 57.9,56.0 56.6,56.6 56.0,57.9 55.4,56.6 54.1,56.0 55.4,55.4" fill="#FFFFFF"/>
+      <polygon points="60.0,61.6 60.6,62.9 61.9,63.5 60.6,64.1 60.0,65.4 59.4,64.1 58.1,63.5 59.4,62.9" fill="#FFFFFF"/>
+      <polygon points="81.5,68.6 82.1,69.9 83.4,70.5 82.1,71.1 81.5,72.4 80.9,71.1 79.6,70.5 80.9,69.9" fill="#FFFFFF"/>
+      <polygon points="68.0,72.1 68.6,73.4 69.9,74.0 68.6,74.6 68.0,75.9 67.4,74.6 66.1,74.0 67.4,73.4" fill="#FFFFFF"/>
+      <polygon points="70.0,93.1 70.6,94.4 71.9,95.0 70.6,95.6 70.0,96.9 69.4,95.6 68.1,95.0 69.4,94.4" fill="#FFFFFF"/>
+      <circle cx="88" cy="46" r="10" fill="#00274C" stroke="#FFCB05" stroke-width="2"/>
+      <circle cx="88" cy="46" r="6.8" fill="none" stroke="#FFFFFF" stroke-width="1.1"/>
+      <ellipse cx="88" cy="46" rx="2.9" ry="6.8" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
+      <line x1="81.2" y1="46" x2="94.8" y2="46" stroke="#FFFFFF" stroke-width="1.6"/>
+    </svg>
+  </header>
+
+  <div class="roster">
+
+    <div class="section">
+      <div class="section-head"><h2>Virtual Assistance &amp; Operations</h2><span class="count">9 FREELANCERS</span></div>
+      <div class="grid">
+        <div class="person"><div class="avatar"><img src="images/doreen.jpg" alt="Doreen C."></div><p class="name"><a href="https://www.upwork.com/freelancers/~019abb4984ef2009ea">Doreen C.</a></p><p class="role">Executive Virtual Assistant | Email, Calendar &amp; CRM Management</p></div>
+        <div class="person"><div class="avatar"><img src="images/charity.jpg" alt="Charity M."></div><p class="name"><a href="https://www.upwork.com/freelancers/~01726a95653827bd96">Charity M.</a></p><p class="role">Executive Virtual Assistant | Real Estate | Operations &amp; Admin Support</p></div>
+        <div class="person"><div class="avatar">EL</div><p class="name"><a href="https://www.upwork.com/freelancers/~01765d90daf9475d12">Esther L.</a></p><p class="role">Executive Virtual Assistant | Admin &amp; CRM Expert</p></div>
+        <div class="person"><div class="avatar"><img src="images/ernest.jpg" alt="Ernest N."></div><p class="name"><a href="https://www.upwork.com/freelancers/~01347792f7a164eb18">Ernest N.</a></p><p class="role">Virtual assistant bilingual (French and English)</p></div>
+        <div class="person"><div class="avatar"><img src="images/arlette.jpg" alt="Arlette K."></div><p class="name"><a href="https://www.upwork.com/freelancers/~0144130dea18bb3673">Arlette K.</a></p><p class="role">Virtual assistant, customer support, call handling, telemarketing</p></div>
+        <div class="person"><div class="avatar"><img src="images/joyce.jpg" alt="Joyce M."></div><p class="name"><a href="https://www.upwork.com/freelancers/~012bd9bf398b7b09e7">Joyce M.</a></p><p class="role">CX &amp; E-Commerce Support Professional | VA | AirBnB CoHost</p></div>
+        <div class="person"><div class="avatar"><img src="images/allan.jpg" alt="Allan M."></div><p class="name"><a href="https://www.upwork.com/freelancers/~0112ea9f3cf59c8990">Allan M.</a></p><p class="role">Agribusiness Operations specialist | Crop Data analyst | AgTech Lead Gen</p></div>
+        <div class="person"><div class="avatar">SM</div><p class="name"><a href="https://www.upwork.com/freelancers/~018c139745adac882b">Sana M.</a></p><p class="role">Virtual Assistant | Data Entry &amp; Web Research</p></div>
+        <div class="person"><div class="avatar"><img src="images/chinyere.jpg" alt="Chinyere U."></div><p class="name">Chinyere U.</p><p class="role">Virtual Assistant | E-Commerce VA | Data Entry | Customer Support</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2>Software Development &amp; Security</h2><span class="count">3 FREELANCERS</span></div>
+      <div class="grid">
+        <div class="person"><div class="avatar">SN</div><p class="name"><a href="https://www.upwork.com/freelancers/~018fbcb5b0641b2d0a">Simon N.</a></p><p class="role">Frontend React Developer | React, Tailwind CSS</p></div>
+        <div class="person"><div class="avatar"><img src="images/baiyewu.jpg" alt="Baiyewu G."></div><p class="name"><a href="https://www.upwork.com/freelancers/~017ca8bfe44abc7b67">Baiyewu G.</a></p><p class="role">Fullstack/Automation Engineer | Python, AI, Test, Extraction Specialist</p></div>
+        <div class="person"><div class="avatar"><img src="images/gena.jpg" alt="Gena Elemo K."></div><p class="name"><a href="https://www.upwork.com/freelancers/~01fa12d3e0c48df2f9">Gena Elemo K.</a></p><p class="role">Ethical Hacker &amp; Pentester | Web, Mobile &amp; API Security</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2>Business, Writing, &amp; Design</h2><span class="count">4 FREELANCERS</span></div>
+      <div class="grid">
+        <div class="person"><div class="avatar"><img src="images/kalin.jpg" alt="Kalin S."></div><p class="name"><a href="https://www.upwork.com/freelancers/~0138293294bfe532e0">Kalin S.</a></p><p class="role">Sales &amp; Management Expert | Team Performance, Leadership &amp; Growth</p></div>
+        <div class="person"><div class="avatar">NO</div><p class="name">Naomi O.</p><p class="role">Business &amp; Career Writer | I Turn Messy Experience Into Words That Work</p></div>
+        <div class="person"><div class="avatar"><img src="images/chukwu.jpg" alt="Chukwu J."></div><p class="name"><a href="https://www.upwork.com/freelancers/~0155aef4c50c10b11e">Chukwu J.</a></p><p class="role">Data Quality | AI Evaluation | Data Annotation</p></div>
+        <div class="person"><div class="avatar"><img src="images/amohelang.jpg" alt="Amohelang Eugy M."></div><p class="name"><a href="https://www.upwork.com/freelancers/~01242fb43b8879ab52">Amohelang Eugy M.</a></p><p class="role">Graphic design</p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p class="q">Questions about the program or a freelancer on this roster?</p>
+    <a href="mailto:globaljobsafrica@umich.edu">globaljobsafrica@umich.edu</a>
+  </footer>
+
+</div>
+</body>
+</html>
